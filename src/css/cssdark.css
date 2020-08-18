@@ -1,0 +1,214 @@
+.body{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow-x: hidden;
+   overflow-y: auto;
+   background-color: #e4e4e4;
+}
+
+.card{
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0px 13px 74px -15px rgb(179, 179, 179);
+   width: 91vw;
+   align-items: center;
+   margin: auto;
+   margin-top: 2rem;
+   height: 0px;
+   border-radius: 10px;
+   background-color: #ffffff;
+   overflow: hidden;
+   transition: height 0.3s;
+}
+
+.heading-1, .heading-2{
+   font-family: 'Varela Round', sans-serif;
+   font-size: 1.5rem;
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 10px;
+}
+#titleInputBox{
+   width: 88vw;
+   height: 2rem;
+   border: 1px solid #e2e2e2;
+   border-radius: 10px;
+   
+}
+#userInputBox{
+   width: 88vw;
+   height: 250px;
+   border: 1px solid #e2e2e2;
+   border-radius: 10px;
+}
+
+#titleInputBox:focus, #userInputBox:focus {
+   outline: none;
+}
+#titleInputBox:hover, #userInputBox:hover{
+   box-shadow: 0px 13px 74px -15px rgb(179, 179, 179);
+   transition: 0.2s;
+}
+
+#titleInputBox::placeholder{
+   text-align: center;
+   padding-top: 8px;
+   font-family: 'Varela Round', sans-serif;
+   color: rgb(117, 117, 117);
+
+}
+#userInputBox::placeholder{
+   text-align: center;
+   padding-top: 7.5rem;
+   font-family: 'Varela Round', sans-serif;
+   color: rgb(117, 117, 117);
+}
+
+.button{
+   font-family: 'Varela Round', sans-serif; 
+   border: none;
+   background: #404040;
+   color: #ffffff !important;
+   font-weight: 100;
+   font-size: 1rem;
+   padding: 15px;
+   text-transform: uppercase;
+   border-radius: 25px;
+   display: inline-block;
+   transition: all 0.3s ease 0s;
+   margin-left: 1rem;
+   margin-top: 1.5rem;
+   margin-bottom: 1.5rem;
+}
+.button:hover {
+   color: #404040 !important;
+   font-weight: 700 !important;
+   
+   letter-spacing: 3px;
+   background: none;
+   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+   -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+   transition: all 0.3s ease 0s;
+   cursor: pointer;
+}
+.btn-Small{
+   height: 6rem;
+   width: 6rem;
+   background-image: linear-gradient(315deg, #e48c76 0%, #e674b0 37%, #6ac9f1 100%);
+   background-color: rgba(255, 255, 255, 0.479);
+   border-radius: 50%;
+   position: absolute;
+   margin-top: 2vh;
+   display: flex;
+   justify-content: center;
+}
+.btn-Small:hover{
+   background-color: #c73e1d;
+  background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%);
+   box-shadow: 0px 13px 74px -15px rgb(179, 179, 179);
+   transition: all 0.3s ease 0s;
+}
+
+.cardSmall {
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0px 13px 74px -15px rgb(179, 179, 179);
+   transition: 0.2s;
+   width: 91vw;
+   border-radius: 10px;
+   overflow-x: hidden;
+   overflow-y: auto;
+   margin-top: 2rem;
+   height: auto;
+   background-color: #ffffff;
+}
+.cardSmall:hover{
+   box-shadow: 0px 13px 74px -15px rgb(179, 179, 179);
+   transition: 0.1s;
+   width: 94vw;
+   
+}
+
+
+.noteName{
+   font-size: large;
+   font-family: 'Varela Round', sans-serif;
+   margin:10px;
+   padding-bottom: 5px;
+   border-bottom: 1px solid #979797;
+   width: auto ;
+   text-align: center;
+}
+.savedNotes{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: small;
+   padding:1rem;
+   height: auto;
+   max-height: 200px;
+   overflow-y: auto;
+}
+
+
+/* Scrollbar */
+
+#style-10::-webkit-scrollbar-track
+{
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+#style-10::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #353535;
+}
+
+
+
+.cardSmall i{
+   float: right;
+   margin-right: 10px;
+   margin-left: 0.5rem;
+   color: #525252;
+}
+
+
+
+
+/* Header Section */
+
+
+.navbar{
+   background-color:#ffffff;
+   height:3.5rem;
+   width:100vw;
+   position: sticky;
+   display:flex;
+   justify-content: space-between;
+   z-index:9;
+   margin-top:0;
+ }
+ .main-title{
+   margin-top:0.5rem;
+   padding-left:4.5vw;
+   font-family:'title-font';
+   color:#3a3a3a;
+}
+
+
+
+/* reminder */
+.circle{
+   width: 100vw;
+   height: 7vh;
+  
+   background-color: #ffffff;
+   border-bottom-left-radius: 80%;
+   border-bottom-right-radius: 80%;
+   display: flex;
+   justify-content: center;
+
+}

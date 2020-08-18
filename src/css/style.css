@@ -1,0 +1,265 @@
+/* Root Elements  */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #121212;
+}
+
+#titleInputBox,
+#userInputBox {
+  color: rgb(194, 194, 194);
+  resize: none;
+  text-align: left;
+  font-family: "Varela Round", sans-serif;
+}
+.parent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+/* Input Fields */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 13px 30px -15px rgb(53, 53, 53);
+  width: 91vw;
+  align-items: center;
+  margin: auto;
+  margin-top: 4rem;
+  height: 0px;
+  border-radius: 10px;
+  background-color: #353535;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.heading-1,
+.heading-2 {
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#titleInputBox {
+  background-color: #787878;
+  width: 88vw;
+  height: 2rem;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+#userInputBox {
+  background-color: #787878;
+  width: 88vw;
+  height: 250px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+#titleInputBox:focus,
+#userInputBox:focus {
+  outline: none;
+}
+#titleInputBox:hover,
+#userInputBox:hover {
+  box-shadow: 0px 13px 30px -15px rgb(73, 73, 73);
+  transition: 0.2s;
+}
+
+#titleInputBox::placeholder {
+  color: rgb(194, 194, 194);
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+}
+#userInputBox::placeholder {
+  text-align: center;
+  padding-top: 7.5rem;
+  font-family: "Varela Round", sans-serif;
+  color: rgb(194, 194, 194);
+}
+
+/* Buttons */
+
+.button {
+  font-family: "Varela Round", sans-serif;
+  border: none;
+  background: #eeeeee;
+  color: #1f1f1f !important;
+  font-weight: 100;
+  font-size: 1rem;
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.button:hover {
+  color: #eeeeee !important;
+
+  letter-spacing: 3px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.btn-Small {
+  height: 6rem;
+  width: 6rem;
+  background-image: linear-gradient(
+    315deg,
+    #e48c76 0%,
+    #e674b0 37%,
+    #6ac9f1 100%
+  );
+  background-color: rgba(255, 255, 255, 0.479);
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-Small:hover {
+  background-color: #c73e1d;
+  background-image: linear-gradient(
+    315deg,
+    #c73e1d 0%,
+    #a23b72 37%,
+    #2e86ab 100%
+  );
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.btn-Small i {
+  position: relative;
+  font-size: 3rem;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+/*Display Notes Section */
+
+.container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.cardSmall {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-self: center;
+  transition: 0.2s;
+  width: 91vw;
+  border-radius: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 2rem;
+  height: auto;
+  background-color: #353535;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.cardSmall:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 92vw;
+}
+
+.noteName {
+  font-size: large;
+  font-family: "Varela Round", sans-serif;
+  margin: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #979797;
+  width: auto;
+  text-align: center;
+  color: white;
+}
+.savedNotes {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+  padding: 1rem;
+  height: auto;
+  max-height: 200px;
+  overflow-y: auto;
+  color: white;
+}
+
+/* SCROLLBAR */
+
+#style-10::-webkit-scrollbar-track {
+  background-color: #353535;
+  border-radius: 10px;
+}
+
+#style-10::-webkit-scrollbar {
+  width: 10px;
+  background-color: #353535;
+}
+
+#style-10::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+
+.cardSmall i {
+  float: right;
+  margin-right: 10px;
+  margin-left: 0.5rem;
+  color: #7c7c7c;
+}
+
+.cardSmall i:hover {
+  color: #c5c5c5;
+  cursor: pointer;
+}
+/* textare */
+textarea {
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+/* Unselect the text  */
+
+i,
+button,
+textarea {
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}

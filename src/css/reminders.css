@@ -1,0 +1,427 @@
+.holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  width: 100vw;
+  height: 7vh;
+  background-color: #353535;
+
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.circle-add {
+  height: 6rem;
+  width: 6rem;
+  background-image: linear-gradient(
+    315deg,
+    #e48c76 0%,
+    #e674b0 37%,
+    #6ac9f1 100%
+  );
+  background-color: rgba(255, 255, 255, 0.479);
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+}
+.circle-add:hover {
+  background-color: #c73e1d;
+  background-image: linear-gradient(
+    315deg,
+    #c73e1d 0%,
+    #a23b72 37%,
+    #2e86ab 100%
+  );
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+.circle-add i {
+  position: relative;
+  font-size: 3rem;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.reminder-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.reminder {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-between;
+  background-color: white;
+  width: 91vw;
+  height: 200px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.reminder:hover,
+.reminder:focus {
+  width: 92vw;
+  cursor: pointer;
+  box-shadow: 0px 13px 30px -15px rgb(104, 104, 104);
+  transition: 0.2s;
+}
+
+.reminder-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.reminder-info p {
+  font-family: "Varela Round", sans-serif;
+  color: black;
+}
+
+/* Time on The bOX and AM PM*/
+
+.time {
+  margin-top: 1.7rem;
+  font-size: 3rem;
+}
+.time span {
+  font-size: 1rem;
+}
+
+/*  */
+.date {
+  text-align: left;
+  margin-left: 0 !important;
+  margin-top: 0;
+}
+.message {
+  max-width: 100%;
+  max-height: 40px;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.reminder-tools {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.reminder-tools .fa-trash {
+  color: #404040;
+  margin-top: 12px;
+  margin-right: 18px;
+  float: right;
+  font-size: 1.5rem;
+}
+.reminder-tools .fa-bell {
+  margin-top: 12px;
+  margin-right: 18px;
+  float: right;
+  font-size: 1.5rem;
+}
+.reminder-tools .fa-trash:hover {
+  color: grey;
+}
+
+/* Colour Changer Circles */
+
+.colour-changer {
+  height: 30px;
+  width: 30px;
+  background-color: #663dff;
+  background-image: linear-gradient(
+    319deg,
+    #663dff 0%,
+    #aa00ff 37%,
+    #cc4499 100%
+  );
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  margin-left: 2rem;
+}
+
+/* New reminder DIV */
+.new-reminder {
+  max-height: 0px;
+  width: 91vw;
+  background-color: #353535;
+  align-self: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.react-date-picker__wrapper {
+  margin-top: 2rem;
+  height: 40px;
+}
+react-date-picker--open react-date-picker--enabled {
+  height: 40px;
+}
+react-date-picker--closed react-date-picker--enabled {
+  height: 40px;
+}
+
+.timeHolder {
+  align-self: center;
+}
+.timeSelector {
+  margin-top: 30px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-evenly;
+}
+.dateSelector {
+  margin-top: 2rem;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-evenly;
+}
+.hourSelector {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 190px;
+}
+
+.hourSelector i {
+  align-self: center;
+  color: #d8cdf6;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.25s linear;
+}
+.hourSelector i:hover {
+  color: #7a6ba3;
+}
+.timeBox {
+  width: 80px;
+  height: 80px;
+  background-color: #cfcfcf;
+  border-radius: 1.6rem;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.monthBox {
+  margin: 0 1rem;
+  width: 30vw;
+  height: 80px;
+  background-color: #cfcfcf;
+  border-radius: 1.6rem;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.yearBox {
+  width: 110px;
+  height: 80px;
+  background-color: #cfcfcf;
+  border-radius: 1.6rem;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* Switch */
+
+.switchText {
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  left: -10%;
+  color: #fff;
+}
+.alarmBox {
+  align-self: center;
+  margin-top: 15px;
+}
+.hidden {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+#switch {
+  background-color: grey;
+  width: 80px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  margin-left: 16px;
+}
+
+#switch::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  left: 3px;
+  transition: left 0.5s;
+  top: 3px;
+}
+
+#switchcheckbox:checked + label {
+  background-color: rgb(112, 255, 112);
+}
+
+#switchcheckbox:checked + label::before {
+  left: 42px;
+}
+
+/* ColourBox*/
+.colorBox {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 80vw;
+  height: 40px;
+  justify-content: space-evenly;
+}
+
+.colorCircle {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Save Button */
+.saveButton {
+  align-self: center;
+  font-family: "Varela Round", sans-serif;
+  border: none;
+  background: #404040;
+  color: #ffffff !important;
+  font-weight: 100;
+  font-size: 1rem;
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 75px;
+}
+.saveButton:hover {
+  color: #404040 !important;
+  font-weight: 700 !important;
+
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.timeBox p {
+  margin: auto;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.8rem;
+}
+.monthBox p {
+  margin: auto;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.4rem;
+}
+.yearBox p {
+  margin: auto;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.8rem;
+}
+
+/* Message Box */
+
+.messageBox {
+  background-color: #787878;
+  align-self: center;
+  margin-top: 18px;
+  width: 88vw;
+  height: 50px;
+  outline: none;
+  border: 1px rgb(204, 204, 204) solid;
+  border-radius: 5px;
+  border: none;
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgb(209, 209, 209);
+}
+
+.messageBox::placeholder {
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgb(209, 209, 209);
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 375px) {
+  .timeBox {
+    width: 60px;
+    height: 60px;
+  }
+  .monthBox {
+    width: 120px;
+    height: 60px;
+  }
+  .yearBox {
+    width: 90px;
+    height: 60px;
+  }
+  .hourSelector {
+    height: 160px;
+  }
+  .time {
+    font-size: 2rem;
+  }
+  .message {
+    margin-top: 3rem;
+  }
+}
