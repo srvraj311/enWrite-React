@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import "./login.css";
 import enwrite from "./New Project.svg";
 import axios from "axios";
+import URL from "../../config.js";
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     loginField: "hidden",
     signupfield: "hidden",
@@ -16,44 +14,6 @@ class Login extends Component {
     errcode: 0,
     login_status: "",
     key: "",
-  };
-
-  status = () => {
-    if (this.state.errcode === 302) {
-      return (
-        <div className="errcode">
-          <p>Incorrect Credentials</p>
-        </div>
-      );
-    }
-    if (this.state.errcode === 303) {
-      return (
-        <div className="errcode">
-          <p>Not registered, Try Sign-Up</p>
-        </div>
-      );
-    }
-    if (this.state.errcode === 200) {
-      return (
-        <div className="errcode">
-          <p>Success !</p>
-        </div>
-      );
-    }
-    if (this.state.errcode === 300) {
-      return (
-        <div className="errcode">
-          <p>Server is Facing Technical Error</p>
-        </div>
-      );
-    }
-    if (this.state.errcode === 301) {
-      return (
-        <div className="errcode">
-          <p>Account exists, Try Log-in</p>
-        </div>
-      );
-    }
   };
 
   showloginfield = () => {
@@ -67,14 +27,24 @@ class Login extends Component {
       };
       axios({
         method: "post",
-        url: "http://0.0.0.0:5000/login",
+        url: `${URL.URL}/login`,
         data: JSON.stringify(json),
       })
         .then((res) => {
-          this.setState({ errcode: res.data.status });
+          this.setState({ errcode: Number(res.data.status) });
           try {
-            this.setState({ login_status: "active", key: res.data.key });
-            this.props.login_update(this.state.key, this.state.username);
+            if (this.state.errcode === 200) {
+              this.setState({ login_status: "active", key: res.data.key });
+              localStorage.setItem(
+                "user",
+                JSON.stringify({
+                  login_status: "active",
+                  key: this.state.key,
+                  username: this.state.username,
+                })
+              );
+              this.props.login_update(this.state.key, this.state.username);
+            }
           } catch {
             console.log("Not logged in");
           }
@@ -87,7 +57,6 @@ class Login extends Component {
     if (this.state.signupfield === "hidden") {
       this.setState({ signupfield: "visible", loginField: "hidden" });
     } else if (this.state.signupfield === "visible") {
-      console.log("ran");
       axios.defaults.headers.post["Content-Type"] = "application/json";
       var json = {
         username: this.state.username.toString(),
@@ -95,13 +64,12 @@ class Login extends Component {
         email: this.state.email.toString(),
       };
       axios({
-        method: "post",
-        url: "http://0.0.0.0:5000/signup",
+        method: "POST",
+        url: `${URL.URL}/signup`,
         data: JSON.stringify(json),
       })
         .then((res) => {
-          this.setState({ errcode: res.data.status });
-          console.log(res.data.message);
+          this.setState({ errcode: Number(res.data.status) });
         })
         .catch((e) => console.log(e));
     }
@@ -110,7 +78,7 @@ class Login extends Component {
   signupfield = () => {
     if (this.state.signupfield === "visible") {
       return (
-        <div className="top-container">
+        <form className="top-container">
           <input
             type="text"
             placeholder="Email"
@@ -132,7 +100,7 @@ class Login extends Component {
               this.setState({ password: event.target.value });
             }}
           />
-        </div>
+        </form>
       );
     } else {
       return null;
@@ -142,7 +110,7 @@ class Login extends Component {
   loginfield = () => {
     if (this.state.loginField === "visible") {
       return (
-        <div className="top-container">
+        <form className="top-container">
           <input
             type="text"
             placeholder="Username"
@@ -157,7 +125,7 @@ class Login extends Component {
               this.setState({ password: event.target.value });
             }}
           />
-        </div>
+        </form>
       );
     } else {
       return null;
@@ -169,6 +137,21 @@ class Login extends Component {
       return;
     }
   };
+  status = () => {
+    if (this.state.errcode === 0) {
+      return "Sign-Up Or Login to continue";
+    } else if (this.state.errcode === 302) {
+      return "Incorrect Credentials";
+    } else if (this.state.errcode === 303) {
+      return "Not registered, Try Sign-Up";
+    } else if (this.state.errcode === 200) {
+      return "Success !";
+    } else if (this.state.errcode === 300) {
+      return "Server is Facing Technical Error";
+    } else if (this.state.errcode === 301) {
+      return "Account exists, Try Log-in";
+    }
+  };
   render() {
     return (
       <div className="login-container">
@@ -177,7 +160,9 @@ class Login extends Component {
         </div>
         {this.loginfield()}
         {this.signupfield()}
-        {this.status()}
+        <div className="errcode">
+          <p>{this.status()}</p>
+        </div>
         <div className="bottom-container">
           <button className="login-btn" onClick={this.showloginfield}>
             Login

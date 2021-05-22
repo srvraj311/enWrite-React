@@ -17,6 +17,11 @@ const Sidebar = (props) => {
     boxDisplay = "none";
   }
 
+  var logout = () => {
+    props.sidebarUpdate("closed");
+    localStorage.clear();
+    window.location.reload(false);
+  };
   return (
     <div>
       <div style={{ width: boxWidth }} className="sidebarContainer">
@@ -68,11 +73,7 @@ const Sidebar = (props) => {
             {" "}
             <i className="fas fa-cog"></i>Settings{" "}
           </Link>
-          <Link
-            onClick={(event) => props.sidebarUpdate("closed")}
-            className="sidebarLink"
-            to="/logout"
-          >
+          <Link to="/" onClick={(event) => logout()} className="sidebarLink">
             {" "}
             <i className="fas fa-sign-out-alt"></i>Log-Out{" "}
           </Link>

@@ -3,8 +3,6 @@ import "../css/reminders.css";
 
 import NewReminder from "./new-reminder";
 
-import JSON from "./reminders.json";
-
 class Reminders extends Component {
   constructor(props) {
     super(props);

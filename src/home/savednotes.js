@@ -15,13 +15,14 @@ class RenderNotes extends Component {
       if (item.id === id && item.title === title && item.note === note) {
         this.props.pushTrash(item);
         // add to bin Function
+
         this.props.JSONnotes.splice(index, 1);
       }
+      this.props.updateNotes();
       return this.setState({
         deletedOne: index,
       });
     });
-    this.props.updateNotes();
   };
 
   // Handler for Search bOX
@@ -48,9 +49,9 @@ class RenderNotes extends Component {
           {...this.props}
         />
         <GetNotes
-          editMe={this.editMe}
           deleteMe={this.deleteMe}
           searchText={this.state.searchText}
+          JSONnotes={this.props.JSONnotes}
           {...this.props}
         />
       </div>

@@ -19,9 +19,7 @@ class NewNote extends Component {
     } else if (!open) {
       this.transition = "0px";
     }
-    {
-      this.forceUpdate();
-    }
+    this.forceUpdate();
   };
   // Title Change Event Handler
   titleInputChange = (event) => {

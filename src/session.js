@@ -2,16 +2,18 @@ import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import TrashBin from "./trashBin/trashbin.js";
 import axios from "axios";
+import URL from "./config.js";
 
 import Home from "./home/home.js";
 import Reminders from "./reminders/reminders.js";
 import Header from "./page-componentss/header/header.js";
 import Sidebar from "./page-componentss/sidebar/sidebar.js";
+import User from "./user/user.js";
+import About from "./about/about.js";
 
 class Session extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       sidebar: "closed",
       JSONnotes: [],
@@ -30,19 +32,23 @@ class Session extends Component {
         key: `${this.props.underwear}`,
       };
       axios
-        .post("http://0.0.0.0:5000/get", JSON.stringify(data_to_send))
+        .post(`${URL.URL}/get`, JSON.stringify(data_to_send))
         .then((response) => {
-          var JSONnotes = response.data.notes;
           this.setState({
-            JSONnotes: JSONnotes,
+            JSONnotes: response.data.notes,
             email: response.data.email,
             reminders: response.data.reminders,
+            trashArr: response.data.bin,
           });
+        })
+        .catch((e) => {
+          console.log(e);
         });
     };
 
     this.pushTrash = (item) => {
       this.state.trashArr.push(item);
+      this.updateNotes();
       this.setState({
         pushed: "Ok",
       });
@@ -52,6 +58,7 @@ class Session extends Component {
     this.clearTrash = () => {
       var length = this.state.trashArr.length;
       this.state.trashArr.splice(0, length);
+      this.updateNotes();
       this.setState({
         deleted: length,
       });
@@ -64,6 +71,7 @@ class Session extends Component {
     };
     this.deleteOneTrash = (index) => {
       this.state.trashArr.splice(index, 1);
+      this.updateNotes();
       this.setState({
         deleted: index,
       });
@@ -76,12 +84,11 @@ class Session extends Component {
       key: `${this.props.underwear}`,
       notes: this.state.JSONnotes,
       reminders: this.state.reminders,
+      bin: this.state.trashArr,
     };
     axios
-      .post("http://0.0.0.0:5000/update", JSON.stringify(data_to_send))
-      .then((response) => {
-        console.log(response.data.status);
-      });
+      .post(`${URL.URL}/update`, JSON.stringify(data_to_send))
+      .then((response) => {});
     this.UNSAFE_componentWillMount();
   };
 
@@ -129,6 +136,11 @@ class Session extends Component {
             />
           )}
         />
+        <Route
+          path="/user"
+          component={() => <User email={this.state.email} {...this.props} />}
+        />
+        <Route path="/about" component={() => <About />} />
       </BrowserRouter>
     );
   }
