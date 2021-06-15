@@ -2,6 +2,9 @@
 
 [![N|Solid](https://res.cloudinary.com/dvmsk482x/image/upload/v1594390496/git_icon_1_lktwla.png)](https://srvraj311.github.io)
 
+### Android version - [Here](https://github.com/srvraj311/enWrite-Android)
+### Desktop version - [Here](https://github.com/srvraj311/enWrite-Desktop-JavaFX)
+### API             - [Here](https://github.com/srvraj311/enWrite-Authentication-api)
 [![]()]()
 enWrite is an simple and clean web app for taking notes on the go and setting reminders for important tasks.
 
