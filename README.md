@@ -1,6 +1,6 @@
 # enWrite
 
-[![N|Solid](https://res.cloudinary.com/dvmsk482x/image/upload/v1594390496/git_icon_1_lktwla.png)](https://srvraj311.github.io)
+[![N|Solid](https://res.cloudinary.com/srvraj311/image/upload/v1626325102/Main_2_hu5xxl.png)](https://srvraj311.github.io)
 
 [![]()]()
 enWrite is an simple and clean web app for taking notes on the go and setting reminders for important tasks.
@@ -10,7 +10,7 @@ enWrite is an simple and clean web app for taking notes on the go and setting re
 - Cross Browser and Platform support
 - Fully Responsive Design
 
-[![N|Solid](https://res.cloudinary.com/dvmsk482x/image/upload/v1597972380/Screenshot_from_2020-08-21_06-42-38_ucwtyx.png)]()
+[![N|Solid](https://res.cloudinary.com/srvraj311/image/upload/v1626325103/git_icon_1_ytmt5o.png)]()
 
 # New Features!
 
