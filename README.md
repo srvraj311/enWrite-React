@@ -57,8 +57,8 @@ $ sudo docker-compose up
 ![image](https://res.cloudinary.com/srvraj311/image/upload/v1626325667/Screenshot_20210715_103637_pajhfp.png)
 ![image](https://res.cloudinary.com/srvraj311/image/upload/v1626325667/Screenshot_20210715_103649_ubdhbg.png)
 ![image](https://res.cloudinary.com/srvraj311/image/upload/v1626325667/Screenshot_20210715_103641_tniq8i.png)
-![image](https://res.cloudinary.com/dvmsk482x/image/upload/v1623922656/Screenshot_20210617_150128_yrlgci.png)
-![image](https://res.cloudinary.com/dvmsk482x/image/upload/v1623922656/Screenshot_20210617_150532_rufjtx.png)
+![image](https://res.cloudinary.com/srvraj311/image/upload/v1626326004/Screenshot_20210715_104259_fdsjsm.png)
+![image](https://res.cloudinary.com/srvraj311/image/upload/v1626326004/Screenshot_20210715_104314_yjylgs.png)
 
 ### Development
 
