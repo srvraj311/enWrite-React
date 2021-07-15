@@ -52,11 +52,11 @@ $ sudo docker-compose up
 ```
 
 ### Screenshots
-![image](https://res.cloudinary.com/dvmsk482x/image/upload/v1623922657/Screenshot_20210617_145917_p3tz9b.png)
-![image](https://res.cloudinary.com/dvmsk482x/image/upload/v1623922749/Screenshot_20210617_145939_sopn7w.png)
-![image](https://res.cloudinary.com/dvmsk482x/image/upload/v1623922749/Screenshot_20210617_150057_i2kvca.png)
-![image](https://res.cloudinary.com/dvmsk482x/image/upload/v1623922657/Screenshot_20210617_150109_eienwc.png)
-![image](https://res.cloudinary.com/dvmsk482x/image/upload/v1623922657/Screenshot_20210617_150120_tpjhcv.png)
+![image](https://res.cloudinary.com/srvraj311/image/upload/v1626325667/Screenshot_20210715_103559_rb8dse.png)
+![image](https://res.cloudinary.com/srvraj311/image/upload/v1626325667/Screenshot_20210715_103617_rngg7b.png)
+![image](https://res.cloudinary.com/srvraj311/image/upload/v1626325667/Screenshot_20210715_103637_pajhfp.png)
+![image](https://res.cloudinary.com/srvraj311/image/upload/v1626325667/Screenshot_20210715_103649_ubdhbg.png)
+![image](https://res.cloudinary.com/srvraj311/image/upload/v1626325667/Screenshot_20210715_103641_tniq8i.png)
 ![image](https://res.cloudinary.com/dvmsk482x/image/upload/v1623922656/Screenshot_20210617_150128_yrlgci.png)
 ![image](https://res.cloudinary.com/dvmsk482x/image/upload/v1623922656/Screenshot_20210617_150224_bh7t1o.png)
 ![image](https://res.cloudinary.com/dvmsk482x/image/upload/v1623922656/Screenshot_20210617_150428_bpifny.png)
