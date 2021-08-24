@@ -51,7 +51,7 @@ class App extends Component {
         </BrowserRouter>
       );
     }
-    if (this.state.login_status === "not-active") {
+    if (this.state.login_status === "not-active" || this.state.login_status == null) {
       return (
         <Login
           componentwillmount={this.UNSAFE_componentWillMount}
@@ -64,7 +64,11 @@ class App extends Component {
     }
   };
   render() {
-    return this.session();
+    return (
+        <div>
+          {this.session()}
+        </div>
+    )
   }
 }
 

@@ -104,22 +104,22 @@ class NewNote extends Component {
 
         <div style={{ height: `${this.transition}` }} className="card">
           <p className="heading-1">Title</p>
-          <textarea
+          <input
             type="text"
             id="titleInputBox"
-            onChange={this.titleInputChange}
+            onChange={(event) => this.titleInputChange(event)}
             className="titlebox"
             placeholder="Give me a Name"
-          ></textarea>
+          />
 
           <p className="heading-2">enWrite Here</p>
-          <textarea
+          <input
             type="text"
             id="userInputBox"
-            onChange={this.userInputChangeHandler}
+            onChange={(event) => this.userInputChangeHandler(event)}
             className="inputBox"
             placeholder="What's On Your Mind"
-          ></textarea>
+          />
           <div>
             <button className="button" align="center" onClick={this.saveNote}>
               Save
